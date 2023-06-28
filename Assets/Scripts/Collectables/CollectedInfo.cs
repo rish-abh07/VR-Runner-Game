@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CollectedInfo : MonoBehaviour
 {
-    public int  coinCount;
+    public static int  coinCount;
     public GameObject coinCountDisplay;
     // Start is called before the first frame update
     void Start()

@@ -23,7 +23,7 @@ public class LevelCounter : MonoBehaviour
     // Update is called once per frame
    IEnumerator CountSequence()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         Countdown3.SetActive(true);
         readyFX.Play();
         yield return new WaitForSeconds(1f);

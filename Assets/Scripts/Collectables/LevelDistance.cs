@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LevelDistance : MonoBehaviour
 {
-    public int dis = 0;
+    public static int dis = 0;
     public GameObject distanceText;
     public bool addingDis = false;
     // Start is called before the first frame update

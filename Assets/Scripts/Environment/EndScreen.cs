@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndScreen : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EndScreen : MonoBehaviour
     public GameObject EndCoinInfo;
     public GameObject EndDisInfo;
     public GameObject EndPanel;
+    public GameObject EndFade;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,11 @@ public class EndScreen : MonoBehaviour
         EndCoinInfo.GetComponent<Text>().text = CollectedInfo.coinCount.ToString();
         EndDisInfo.GetComponent<Text>().text = LevelDistance.dis.ToString();
         EndPanel.SetActive(true);
+        yield return new WaitForSeconds(3);
+        EndFade.SetActive(true);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("MainMenu");
+
         
     }
 }
